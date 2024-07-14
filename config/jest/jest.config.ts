@@ -10,16 +10,7 @@ const config: Config = {
   moduleDirectories: ['node_modules'],
 
   modulePaths: ['<rootDir>src'],
-  moduleFileExtensions: [
-    'js',
-    'mjs',
-    'cjs',
-    'jsx',
-    'ts',
-    'tsx',
-    'json',
-    'node',
-  ],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
 
   rootDir: '../../',
 
@@ -30,7 +21,7 @@ const config: Config = {
   testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
   moduleNameMapper: {
-    '\\.module\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.module\\.scss$': 'identity-obj-proxy',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },

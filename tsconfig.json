@@ -29,7 +29,8 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "ts-node": {
     "compilerOptions": {
@@ -43,6 +44,6 @@
     "./src/**/*.tsx",
     "webpack.config.ts",
     "config/jest/**/*",
-    "eslint.config.mjss"
+    "./**/eslint.config.mjs"
   ]
 }

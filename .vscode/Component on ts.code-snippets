@@ -4,7 +4,7 @@
     "body": [
       "import { classNames } from 'shared/lib/classNames/classNames';",
       "",
-      "import * as cls from './${1:${TM_FILENAME_BASE}}.module.scss';",
+      "import cls from './${1:${TM_FILENAME_BASE}}.module.scss';",
       "",
       "interface ${1:${TM_FILENAME_BASE}}Props {",
       "  className?: string;",
@@ -16,8 +16,8 @@
       "",
       "    </div>",
       "  );",
-      "};"
+      "};",
     ],
-    "description": "Create a React component with SCSS module"
-  }
+    "description": "Create a React component with SCSS module",
+  },
 }
