@@ -43,7 +43,9 @@
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "webpack.config.ts",
-    "config/jest/**/*",
-    "./**/eslint.config.mjs"
+    "config/jest/**/*.ts",
+    "config/jest/**/*.tsx",
+    "./**/eslint.config.mjs",
+    "./**/global.d.ts"
   ]
 }
