@@ -1,0 +1,23 @@
+{
+  "Create React Component with SCSS Module": {
+    "prefix": "rsc",
+    "body": [
+      "import { classNames } from 'shared/lib/classNames/classNames';",
+      "",
+      "import * as cls from './${1:${TM_FILENAME_BASE}}.module.scss';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE}}Props {",
+      "  className?: string;",
+      "}",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = ({ className }: ${1:${TM_FILENAME_BASE}}Props) => {",
+      "  return (",
+      "    <div className={classNames(cls.${1:${TM_FILENAME_BASE}}, {}, [className])}>",
+      "",
+      "    </div>",
+      "  );",
+      "};"
+    ],
+    "description": "Create a React component with SCSS module"
+  }
+}
