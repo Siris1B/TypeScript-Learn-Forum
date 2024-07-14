@@ -9,7 +9,7 @@ import tsEslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import jest from 'jest';
 import esJest from 'eslint-plugin-jest';
-import storybook from 'storybook/recommended';
+import storybook from 'storybook';
 
 /** @type {import('eslint'.Linter.FlatConfig[])} */
 export default tsEslint.config(
