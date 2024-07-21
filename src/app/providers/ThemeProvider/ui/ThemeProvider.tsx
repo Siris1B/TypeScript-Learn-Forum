@@ -8,13 +8,16 @@ import {
 
 export interface IThemeProps {
   children?: ReactNode | undefined;
+  initialTheme?: Theme;
 }
 
 const defaultTheme =
   (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT;
 
-const ThemeProvider: FC<IThemeProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
+const ThemeProvider: FC<IThemeProps> = (props) => {
+  const { children, initialTheme } = props;
+
+  const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
 
   const defaultProps = useMemo(
     () => ({

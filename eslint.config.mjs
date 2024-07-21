@@ -10,12 +10,13 @@ import importPlugin from 'eslint-plugin-import';
 import jest from 'jest';
 import esJest from 'eslint-plugin-jest';
 import storybook from 'storybook';
+import { fixupPluginRules } from '@eslint/compat';
 
 /** @type {import('eslint'.Linter.FlatConfig[])} */
 export default tsEslint.config(
   {
     plugins: {
-      'react-hooks': eslintReactHooks,
+      'react-hooks': fixupPluginRules(eslintReactHooks),
       react,
       'react-refresh': eslintReactRefresh, //
       prettier: prettierPlugin,
@@ -58,6 +59,8 @@ export default tsEslint.config(
       'space-infix-ops': 'error',
       'space-unary-ops': 'error',
       'prefer-const': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'error',
       'import/order': [
         'error',
         {
