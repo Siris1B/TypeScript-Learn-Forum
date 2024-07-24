@@ -21,7 +21,8 @@
     "test:ui:local": "npx loki --requireReference --reactUri file:./storybook-static",
     "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
-    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html"
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -93,7 +94,8 @@
     "webpack": "^5.69.1",
     "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.7.4",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
