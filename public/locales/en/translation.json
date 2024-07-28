@@ -10,5 +10,8 @@
   "Вхід": "Log in",
   "Увійти": "Log in",
   "Введіть логін": "Enter username",
-  "Введіть пароль": "Enter password"
+  "Введіть пароль": "Enter password",
+  "Форма авторизації": "Auth form",
+  "Введено неправильний логін чи пароль": "Login or password is not correct",
+  "Вийти": "Log out"
 }

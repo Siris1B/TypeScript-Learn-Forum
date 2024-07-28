@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof MainPage> = {
   component: MainPage,
+  title: 'pages/MainPage',
 };
 
 export default meta;

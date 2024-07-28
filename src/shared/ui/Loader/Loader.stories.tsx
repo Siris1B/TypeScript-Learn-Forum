@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Loader> = {
   component: Loader,
+  title: 'shared/Loader',
 };
 
 export default meta;

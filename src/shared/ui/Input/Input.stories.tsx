@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Input> = {
   component: Input,
+  title: 'shared/Input',
 };
 
 export default meta;

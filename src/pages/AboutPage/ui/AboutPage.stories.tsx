@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof AboutPage> = {
   component: AboutPage,
+  title: 'pages/AboutPage',
 };
 
 export default meta;

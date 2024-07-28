@@ -7,6 +7,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Modal> = {
   component: Modal,
+  title: 'shared/Modal',
 };
 
 export default meta;

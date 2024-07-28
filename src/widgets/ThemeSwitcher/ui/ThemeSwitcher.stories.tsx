@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof ThemeSwitcher> = {
   component: ThemeSwitcher,
+  title: 'widgets/ThemeSwitcher',
 };
 
 export default meta;

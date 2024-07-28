@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  title: 'shared/Button',
 };
 
 export default meta;
@@ -102,5 +103,13 @@ export const SquareXL: Story = {
     theme: ThemeButton.BACKGROUND_INVERTED,
     square: true,
     size: SizeButton.XL,
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: '>',
+    theme: ThemeButton.OUTLINE,
+    disabled: true,
   },
 };

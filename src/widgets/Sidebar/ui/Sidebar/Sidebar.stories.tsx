@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Sidebar> = {
   component: Sidebar,
+  title: 'widgets/Sidebar',
 };
 
 export default meta;

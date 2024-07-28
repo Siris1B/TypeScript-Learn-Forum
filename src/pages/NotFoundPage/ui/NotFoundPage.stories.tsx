@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof NotFoundPage> = {
   component: NotFoundPage,
+  title: 'pages/NotFoundPage',
 };
 
 export default meta;

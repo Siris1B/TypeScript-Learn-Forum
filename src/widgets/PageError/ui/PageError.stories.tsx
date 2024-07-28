@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof PageError> = {
   component: PageError,
+  title: 'widgets/PageError',
 };
 
 export default meta;
