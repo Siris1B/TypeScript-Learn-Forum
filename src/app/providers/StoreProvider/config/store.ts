@@ -1,7 +1,6 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
-import { DeepPartial } from 'shared/types/DeepPartial';
 
 import { StateSchema } from './StateSchema';
 import { createReducerManager } from './reducerManager';
