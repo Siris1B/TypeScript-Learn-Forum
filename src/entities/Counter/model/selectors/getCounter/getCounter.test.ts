@@ -1,4 +1,3 @@
-import { DeepPartial } from 'shared/types/DeepPartial';
 import { StateSchema } from 'app/providers/StoreProvider';
 
 import { getCounter } from './getCounter';

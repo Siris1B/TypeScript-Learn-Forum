@@ -7,16 +7,22 @@ import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import 'app/styles/index.scss';
 import { StoreProvider } from 'app/providers/StoreProvider';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <StoreProvider>
+const rootElement = document.getElementById('root');
+
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+
+  root.render(
     <BrowserRouter>
-      <ErrorBoundary>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </ErrorBoundary>
-    </BrowserRouter>
-    ,
-  </StoreProvider>,
-);
+      <StoreProvider>
+        <ErrorBoundary>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </ErrorBoundary>
+      </StoreProvider>
+    </BrowserRouter>,
+  );
+} else {
+  console.error('Element with id "root" not found in the document.');
+}

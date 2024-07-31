@@ -12,6 +12,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     "baseUrl": ".",
+    "strict": true,
     "paths": {
       "*": ["./src/*"]
     },
