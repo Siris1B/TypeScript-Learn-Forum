@@ -1,9 +1,9 @@
-import { LOCAL_STORAGE_THEME_KEY } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import axios from 'axios';
+import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 
 export const $api = axios.create({
   baseURL: __API__URL__,
   headers: {
-    authorization: localStorage.getItem(LOCAL_STORAGE_THEME_KEY) || '',
+    authorization: localStorage.getItem(USER_LOCALSTORAGE_KEY) || '',
   },
 });

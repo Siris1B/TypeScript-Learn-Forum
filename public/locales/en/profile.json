@@ -2,5 +2,15 @@
   "Профіль": "Profile",
   "Редагувати": "Edit",
   "Ваше ім'я": "Your name",
-  "Ваше прізвище": "Your lastname"
+  "Ваше прізвище": "Your lastname",
+  "Помилка завантаження профіля": "Profile loading error",
+  "Спробуйте оновити сторінку": "Try to reload page",
+  "Вийти з редагування": "Exit from edit mode",
+  "Зберегти зміни": "Save changes",
+  "Ваш вік": "Your age",
+  "Місто": "Your city",
+  "Ім'я користувача": "Username",
+  "Вкажіть посилання на аватар": "Enter avatar url",
+  "Вкажіть валюту": "Select currency",
+  "Вкажіть країну": "Select country"
 }
