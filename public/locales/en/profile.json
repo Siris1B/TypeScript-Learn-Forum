@@ -12,5 +12,10 @@
   "Ім'я користувача": "Username",
   "Вкажіть посилання на аватар": "Enter avatar url",
   "Вкажіть валюту": "Select currency",
-  "Вкажіть країну": "Select country"
+  "Вкажіть країну": "Select country",
+  "Ім'я та прізвище обов'язкові до заповнення": "Name and lastname is required",
+  "Серверна помилка": "Server error",
+  "Некоректний вік": "Incorrect age",
+  "Некоректна країна": "Incorrect country",
+  "Відсутність даних": "Missing data"
 }

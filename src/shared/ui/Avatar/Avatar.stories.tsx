@@ -1,9 +1,6 @@
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-
-import { Theme } from '../../../app/providers/ThemeProvider';
+import AvatarImg from 'shared/assets/tests/storybook.jpg';
 
 import { Avatar } from './Avatar';
-import AvatarImg from './storybook.jpg';
 
 import type { Meta, StoryObj } from '@storybook/react';
 

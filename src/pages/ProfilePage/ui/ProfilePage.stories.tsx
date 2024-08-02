@@ -1,5 +1,8 @@
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
+import { AvatarImg } from 'shared/assets/tests/storybook.jpg';
 
 import { Theme } from '../../../app/providers/ThemeProvider';
 
@@ -17,10 +20,41 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {},
-  decorators: [StoreDecorator({})],
+  decorators: [
+    StoreDecorator({
+      profile: {
+        form: {
+          username: 'admin',
+          age: 22,
+          country: Country.Ukraine,
+          lastname: 'Попович',
+          first: 'Юра',
+          city: 'Козятин',
+          currency: Currency.UAH,
+          avatar: AvatarImg,
+        },
+      },
+    }),
+  ],
 };
 
 export const Dark: Story = {
   args: {},
-  decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({})],
+  decorators: [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+      profile: {
+        form: {
+          username: 'admin',
+          age: 22,
+          country: Country.Ukraine,
+          lastname: 'Попович',
+          first: 'Юра',
+          city: 'Козятин',
+          currency: Currency.UAH,
+          avatar: AvatarImg,
+        },
+      },
+    }),
+  ],
 };

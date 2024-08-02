@@ -33,6 +33,7 @@ export default tsEslint.config(
         ...globals.es2022,
         __IS_DEV__: true,
         __API__URL__: true,
+        __PROJECT__: true,
         ...globals.jest,
       },
       parser: tsEslint.parser,
