@@ -28,6 +28,7 @@ export function buildPlugins({
   ];
 
   if (isDev) {
+    // HotModuleReplacementPlugin not working
     plugins.push(new webpack.HotModuleReplacementPlugin());
     plugins.push(
       new BundleAnalyzerPlugin({
