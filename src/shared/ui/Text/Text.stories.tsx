@@ -2,7 +2,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 
 import { Theme } from '../../../app/providers/ThemeProvider/index';
 
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -70,4 +70,20 @@ export const ErrorDark: Story = {
     theme: TextTheme.ERROR,
   },
   decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const SizeL: Story = {
+  args: {
+    title: 'Title lorem ipsum',
+    text: 'Description Description Description Description',
+    size: TextSize.L,
+  },
+};
+
+export const SizeM: Story = {
+  args: {
+    title: 'Title lorem ipsum',
+    text: 'Description Description Description Description',
+    size: TextSize.M,
+  },
 };

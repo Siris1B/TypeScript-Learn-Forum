@@ -15,7 +15,11 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [ThemeDecorator(Theme.LIGHT), StyleDecorator, RouterDecorator],
+  decorators: [
+    ThemeDecorator(Theme.LIGHT),
+    StyleDecorator,
+    RouterDecorator,
+  ],
 };
 
 export default preview;

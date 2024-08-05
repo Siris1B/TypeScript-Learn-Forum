@@ -29,7 +29,9 @@ export const Modal = (props: ModalProps) => {
 
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+  const timerRef = useRef() as MutableRefObject<
+    ReturnType<typeof setTimeout>
+  >;
 
   useEffect(() => {
     if (isOpen) setIsMounted(true);
@@ -80,7 +82,11 @@ export const Modal = (props: ModalProps) => {
   return (
     <Portal>
       <div
-        className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}
+        className={classNames(cls.Modal, mods, [
+          className,
+          theme,
+          'app_modal',
+        ])}
       >
         <div className={cls.overlay} onClick={closeHandler}>
           <div className={cls.content} onClick={onContentClick}>

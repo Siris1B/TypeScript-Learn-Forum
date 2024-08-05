@@ -6,12 +6,16 @@ import { Counter } from './Counter';
 
 describe('Button', () => {
   test('Test render', () => {
-    componentRender(<Counter />, { initialState: { counter: { value: 10 } } });
+    componentRender(<Counter />, {
+      initialState: { counter: { value: 10 } },
+    });
     expect(screen.getByTestId('value-title')).toHaveTextContent('10');
   });
 
   test('increment', async () => {
-    componentRender(<Counter />, { initialState: { counter: { value: 10 } } });
+    componentRender(<Counter />, {
+      initialState: { counter: { value: 10 } },
+    });
 
     await userEvent.click(screen.getByTestId('incBtn'));
 
@@ -19,7 +23,9 @@ describe('Button', () => {
   });
 
   test('decrement', async () => {
-    componentRender(<Counter />, { initialState: { counter: { value: 10 } } });
+    componentRender(<Counter />, {
+      initialState: { counter: { value: 10 } },
+    });
     await userEvent.click(screen.getByTestId('decrBtn'));
     expect(screen.getByTestId('value-title')).toHaveTextContent('9');
   });

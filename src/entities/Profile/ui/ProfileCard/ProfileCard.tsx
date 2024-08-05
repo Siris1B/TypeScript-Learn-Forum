@@ -48,7 +48,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
   if (isLoading)
     return (
       <div
-        className={classNames(cls.ProfileCard, {}, [className, cls.loading])}
+        className={classNames(cls.ProfileCard, {}, [
+          className,
+          cls.loading,
+        ])}
       >
         <Loader />
       </div>
@@ -56,7 +59,9 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   if (error) {
     return (
-      <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+      <div
+        className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+      >
         <Text
           title={t('Помилка завантаження профіля')}
           text={t('Спробуйте оновити сторінку')}

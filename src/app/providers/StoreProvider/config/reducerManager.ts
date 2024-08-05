@@ -5,7 +5,11 @@ import {
   ReducersMapObject,
 } from '@reduxjs/toolkit';
 
-import { ReducerManager, StateSchema, StateSchemaKey } from './StateSchema';
+import {
+  ReducerManager,
+  StateSchema,
+  StateSchemaKey,
+} from './StateSchema';
 
 type CombinedReducer = Reducer<StateSchema, AnyAction>;
 

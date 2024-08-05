@@ -1,0 +1,13 @@
+{
+  "Describe and Test Function": {
+    "prefix": "tes",
+    "body": [
+      "describe('${1:${TM_FILENAME_BASE}}', () => {",
+      "  test('', () => {",
+      "    expect().toEqual();",
+      "  });",
+      "});",
+    ],
+    "description": "Describe and test a function with a given state and expected value.",
+  },
+}

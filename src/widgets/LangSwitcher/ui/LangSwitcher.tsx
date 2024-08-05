@@ -8,19 +8,23 @@ interface LangSwitcherProps {
   short?: boolean;
 }
 
-export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
-  const { t, i18n } = useTranslation();
+export const LangSwitcher = memo(
+  ({ className, short }: LangSwitcherProps) => {
+    const { t, i18n } = useTranslation();
 
-  const toggle = () => {
-    i18n.changeLanguage(i18n.language === 'ua' ? 'en' : 'ua');
-  };
-  return (
-    <Button
-      className={classNames('"i18next/no-literal-string": 2', {}, [className])}
-      theme={ThemeButton.CLEAR}
-      onClick={toggle}
-    >
-      {t(short ? 'Укр' : 'Українська')}
-    </Button>
-  );
-});
+    const toggle = () => {
+      i18n.changeLanguage(i18n.language === 'ua' ? 'en' : 'ua');
+    };
+    return (
+      <Button
+        className={classNames('"i18next/no-literal-string": 2', {}, [
+          className,
+        ])}
+        theme={ThemeButton.CLEAR}
+        onClick={toggle}
+      >
+        {t(short ? 'Укр' : 'Українська')}
+      </Button>
+    );
+  },
+);

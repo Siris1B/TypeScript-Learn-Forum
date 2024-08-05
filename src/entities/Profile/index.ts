@@ -12,4 +12,7 @@ export { getProfileReadonly } from './model/selectors/getProfileReadonly/getProf
 export { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
 export { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 
-export { profileActions, profileReducer } from './model/slice/profileSlice';
+export {
+  profileActions,
+  profileReducer,
+} from './model/slice/profileSlice';
