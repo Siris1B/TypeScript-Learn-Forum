@@ -13,5 +13,6 @@
   "Введіть пароль": "Enter password",
   "Форма авторизації": "Auth form",
   "Введено неправильний логін чи пароль": "Login or password is not correct",
-  "Вийти": "Log out"
+  "Вийти": "Log out",
+  "Коментарі відсутні": "No comments"
 }
