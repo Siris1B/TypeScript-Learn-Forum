@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,24 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "-FX_oCq"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "123",
+      "id": "ic3soHx"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "hi",
+      "id": "EAq8IwJ"
     }
   ],
   "users": [
@@ -118,14 +138,28 @@
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
     }
   ],
-  "profile": {
-    "first": "Юра",
-    "lastname": "Попович",
-    "age": 20,
-    "currency": "USD",
-    "country": "Ukraine",
-    "city": "Koziatyn",
-    "username": "admin",
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
-  }
+  "profile": [
+    {
+      "id": 1,
+      "first": "Юра5",
+      "lastname": "Попович",
+      "age": 20,
+      "currency": "USD",
+      "country": "Ukraine",
+      "city": "Koziatyn",
+      "username": "admin",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+    },
+    {
+      "id": 2,
+      "first": "Юра",
+      "lastname": "Попович2",
+      "age": 22,
+      "currency": "USD",
+      "country": "USA",
+      "city": "Koziatyn",
+      "username": "user",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+    }
+  ]
 }

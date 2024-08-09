@@ -15,13 +15,15 @@ import {
   profileReducer,
   ValidateProfileError,
 } from 'entities/Profile';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useAppDispatch/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
@@ -42,6 +44,7 @@ const ProfilePage = (props: ProfilePageProps) => {
   const isLoading = useSelector(getProfileIsLoading);
   const readonly = useSelector(getProfileReadonly);
   const validateErrors = useSelector(getProfileValidateErrors);
+  const { id: profileId } = useParams<{ id: string }>();
 
   const validateErrorTranslates = {
     [ValidateProfileError.SERVER_ERROR]: t('Серверна помилка'),
@@ -53,11 +56,9 @@ const ProfilePage = (props: ProfilePageProps) => {
     [ValidateProfileError.NO_DATA]: t('Відсутність даних'),
   };
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData());
-    }
-  }, [dispatch]);
+  useInitialEffect(() => {
+    if (profileId) dispatch(fetchProfileData(profileId));
+  });
 
   const onChangeFirstname = useCallback(
     (value?: string) => {

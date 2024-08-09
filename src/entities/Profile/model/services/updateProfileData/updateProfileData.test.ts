@@ -16,6 +16,7 @@ const data = {
   first: 'Юра',
   city: 'Козятин',
   currency: Currency.UAH,
+  id: '1',
 };
 
 describe('updateProfileData.test', () => {
