@@ -11,7 +11,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof ArticleDetails> = {
   component: ArticleDetails,
-  title: 'entities/ArticleDetails',
+  title: 'entities/article/ArticleDetails',
 };
 
 export default meta;
@@ -23,6 +23,12 @@ const article: Article = {
   subtitle: 'Что нового в JS за 2022 год?',
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
+  user: {
+    id: '1',
+    username: 'admin',
+    avatar:
+      'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+  },
   createdAt: '26.02.2022',
   type: [ArticleType.IT],
   blocks: [
