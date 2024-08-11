@@ -17,7 +17,9 @@ const data = {
 };
 
 describe('fetchProfileData.test', () => {
+  // eslint-disable-next-line
   let dispatch: Dispatch;
+  // eslint-disable-next-line
   let getState: () => StateSchema;
 
   beforeEach(() => {

@@ -20,7 +20,9 @@ const data = {
 };
 
 describe('updateProfileData.test', () => {
+  // eslint-disable-next-line
   let dispatch: Dispatch;
+  // eslint-disable-next-line
   let getState: () => StateSchema;
 
   beforeEach(() => {
