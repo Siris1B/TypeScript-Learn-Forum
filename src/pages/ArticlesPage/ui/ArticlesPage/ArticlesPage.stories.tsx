@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof ArticlesPage> = {
   component: ArticlesPage,
-  title: 'pages/ArticlesPage',
+  title: 'pages?Article/ArticlesPage',
 };
 
 export default meta;

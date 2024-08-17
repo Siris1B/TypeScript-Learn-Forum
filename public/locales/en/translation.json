@@ -19,5 +19,18 @@
   "Відправити": "Send",
   "Чтати далі...": "Read article",
   "Статті": "Articles",
-  "Профіль": "Profile"
+  "Профіль": "Profile",
+  "Сортувати за": "Sort by",
+  "Пошук": "Find",
+  "зростанням": "ascending",
+  "спаданням": "descending",
+  "за": "by",
+  "даті створення": "created date",
+  "назві": "title",
+  "переглядам": "views",
+  "Усі": "All",
+  "Айті": "IT",
+  "Економіка": "Economic",
+  "Наука": "Science",
+  "Статті не знайдені": "Articles not found"
 }
