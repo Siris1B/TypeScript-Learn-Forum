@@ -6,6 +6,9 @@ import { LoginModal } from 'features/AuthByUsername';
 import { useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
 import { useDispatch } from 'react-redux';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 
 import cls from './Navbar.module.scss';
 
@@ -34,6 +37,18 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   if (authData) {
     return (
       <div className={classNames(cls.Navbar, {}, [className])}>
+        <Text
+          theme={TextTheme.INVERTED}
+          className={cls.appName}
+          title={t('SirisB App')}
+        />
+        <AppLink
+          theme={AppLinkTheme.SECONDARY}
+          to={RoutePath.article_create}
+          className={cls.createBtn}
+        >
+          {t('Створити статтю')}
+        </AppLink>
         <Button
           theme={ThemeButton.CLEAR_INVERTED}
           className={cls.links}
