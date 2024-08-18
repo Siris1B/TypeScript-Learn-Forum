@@ -2,7 +2,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
-import { ArticleView, ArticleViewSelector } from 'entities/Article';
 import {
   DynamicModuleLoader,
   ReducersList,

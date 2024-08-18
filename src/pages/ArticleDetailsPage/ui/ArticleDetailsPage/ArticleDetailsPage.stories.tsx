@@ -1,9 +1,3 @@
-import { Article } from 'entities/Article';
-import {
-  ArticleType,
-  ArticleBlockType,
-} from 'entities/Article/model/types/article';
-
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 import type { Meta, StoryObj } from '@storybook/react';

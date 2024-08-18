@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { ArticleDetails } from 'entities/Article';
 import { CommentList } from 'entities/Comment';
 import { Text, TextSize } from 'shared/ui/Text/Text';
@@ -13,8 +13,6 @@ import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/addCommentForm';
-import { Button } from 'shared/ui/Button/Button';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 
@@ -29,6 +27,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import { articleDetailsPageReducer } from '../../model/slices';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 import cls from './ArticleDetailsPage.module.scss';
 
@@ -53,11 +52,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const recommendationsError = useSelector(getArticleRecommendationsError);
 
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
-
-  const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles);
-  }, [navigate]);
 
   const onSendComment = useCallback(
     (text: string) => {
@@ -84,9 +78,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       <Page
         className={classNames(cls.ArticleDetailsPage, {}, [className])}
       >
-        <Button onClick={onBackToList}>
-          {t('Повернутись до переліку тем')}
-        </Button>
+        <ArticleDetailsPageHeader />
         <ArticleDetails id={articleId} />
         <Text
           size={TextSize.L}
