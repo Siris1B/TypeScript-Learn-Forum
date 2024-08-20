@@ -1,4 +1,4 @@
-import { CountrySelect } from 'entities/Country';
+import { CountrySelect } from './CountrySelect';
 
 import type { Meta, StoryObj } from '@storybook/react';
 

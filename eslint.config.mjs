@@ -11,6 +11,7 @@ import jest from 'jest';
 import esJest from 'eslint-plugin-jest';
 import storybook from 'storybook';
 import { fixupPluginRules } from '@eslint/compat';
+import featureSlicedImportChecker from 'eslint-plugin-feature-sliced-import-checker';
 
 /** @type {import('eslint'.Linter.FlatConfig[])} */
 export default tsEslint.config(
@@ -25,6 +26,7 @@ export default tsEslint.config(
       jest,
       'eslint-plugin-jest': esJest,
       storybook,
+      'feature-sliced-import-checker': featureSlicedImportChecker,
     },
     languageOptions: {
       globals: {
@@ -88,6 +90,7 @@ export default tsEslint.config(
       'react/react-in-jsx-scope': 'off',
       'react/jsx-uses-react': 'off',
       'react/prop-types': 'off',
+      'feature-sliced-import-checker/path-checker': 'error',
     },
   },
   {
