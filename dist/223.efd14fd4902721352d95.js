@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktypescript_app=self.webpackChunktypescript_app||[]).push([[223],{223:(t,e,s)=>{s.r(e),s.d(e,{default:()=>n});var p=s(848),r=s(317),a=s(540),c=s(389);const n=function(){var t=(0,c.Bd)("main").t,e=(0,a.useState)("");return e[0],e[1],(0,p.jsxs)("div",{children:[(0,p.jsx)(r.r,{}),t("Головна сторінка")]})}}}]);
