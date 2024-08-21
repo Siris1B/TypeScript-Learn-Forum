@@ -3,27 +3,11 @@
   border: 2px solid var(--inverted-bg-color);
 }
 
-.data {
-  margin-top: 0;
-}
-
-.input {
-  margin-top: 10px;
-}
-
 .editing {
   border: 2px solid var(--inverted-primary-color);
 }
 
 .loading,
 .error {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 300px;
-}
-
-.avatarWrapper {
-  display: flex;
-  justify-content: center;
 }

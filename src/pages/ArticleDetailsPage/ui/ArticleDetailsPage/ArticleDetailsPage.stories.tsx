@@ -1,3 +1,5 @@
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 import type { Meta, StoryObj } from '@storybook/react';
@@ -5,6 +7,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof ArticleDetailsPage> = {
   component: ArticleDetailsPage,
   title: 'pages/ArticleDetailsPage',
+  decorators: [StoreDecorator({})],
 };
 
 export default meta;
