@@ -1,5 +1,5 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { ButtonHTMLAttributes, FC, memo, ReactNode } from 'react';
+import { FC, forwardRef, memo, ReactNode } from 'react';
 
 import styles from './Button.module.scss';
 
@@ -18,7 +18,11 @@ export enum SizeButton {
   XL = 'size_xl',
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   className?: string;
   theme?: ThemeButton;
   square?: boolean;
@@ -27,30 +31,35 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
 }
 
-export const Button: FC<ButtonProps> = memo((props) => {
-  const {
-    className,
-    children,
-    theme = ThemeButton.OUTLINE,
-    square,
-    size = SizeButton.L,
-    disabled,
-    ...otherProps
-  } = props;
+const ButtonComponent: FC<ButtonProps> = forwardRef(
+  (props, ref = null) => {
+    const {
+      className,
+      children,
+      theme = ThemeButton.OUTLINE,
+      square,
+      size = SizeButton.L,
+      disabled,
+      ...otherProps
+    } = props;
 
-  const mods: Mods = {
-    [styles[theme]]: true,
-    [styles.square]: square,
-    [styles[size]]: true,
-    [styles.disabled]: disabled,
-  };
-  return (
-    <button
-      disabled={disabled}
-      className={classNames(styles.ButtonClass, mods, [className])}
-      {...otherProps}
-    >
-      {children}
-    </button>
-  );
-});
+    const mods: Mods = {
+      [styles[theme]]: true,
+      [styles.square]: square,
+      [styles[size]]: true,
+      [styles.disabled]: disabled,
+    };
+    return (
+      <button
+        disabled={disabled}
+        ref={ref}
+        className={classNames(styles.ButtonClass, mods, [className])}
+        {...otherProps}
+      >
+        {children}
+      </button>
+    );
+  },
+);
+
+export const Button = memo(ButtonComponent);

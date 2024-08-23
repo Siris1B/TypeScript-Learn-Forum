@@ -12,8 +12,7 @@ import {
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
-
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack/HStack/HStack';
 
 interface ProfilePageHeaderProps {
   className?: string;
@@ -43,38 +42,33 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+    <HStack
+      max
+      justify={'between'}
+      className={classNames('', {}, [className])}
+    >
       <Text title={t('Профіль')} />
       {canEdit && (
-        <div className={cls.btnsWrapper}>
+        <>
           {readonly ? (
-            <Button
-              onClick={onEdit}
-              theme={ThemeButton.OUTLINE}
-              className={cls.editBtn}
-            >
+            <Button onClick={onEdit} theme={ThemeButton.OUTLINE}>
               {t('Редагувати')}
             </Button>
           ) : (
-            <>
+            <HStack gap={'8'}>
               <Button
                 onClick={onCancelEdit}
                 theme={ThemeButton.OUTLINE_RED}
-                className={cls.editBtn}
               >
                 {t('Вийти з редагування')}
               </Button>
-              <Button
-                onClick={onSave}
-                theme={ThemeButton.OUTLINE}
-                className={cls.saveBtn}
-              >
+              <Button onClick={onSave} theme={ThemeButton.OUTLINE}>
                 {t('Зберегти зміни')}
               </Button>
-            </>
+            </HStack>
           )}
-        </div>
+        </>
       )}
-    </div>
+    </HStack>
   );
 };

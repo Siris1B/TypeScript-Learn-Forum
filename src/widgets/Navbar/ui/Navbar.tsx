@@ -36,7 +36,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
   if (authData) {
     return (
-      <div className={classNames(cls.Navbar, {}, [className])}>
+      <header className={classNames(cls.Navbar, {}, [className])}>
         <Text
           theme={TextTheme.INVERTED}
           className={cls.appName}
@@ -56,7 +56,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         >
           {t('Вийти')}
         </Button>
-      </div>
+      </header>
     );
   }
 

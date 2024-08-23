@@ -1,0 +1,68 @@
+.ListBox {
+  position: relative;
+}
+
+.button {
+  cursor: pointer;
+  color: var(--primary-color);
+  padding: 6px 15px;
+
+  &:hover {
+    opacity: 0.8;
+    fill-opacity: 0.8;
+    stroke-opacity: 0.8;
+  }
+}
+
+.trigger {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options {
+  background: var(--listbox-bg);
+
+  position: absolute;
+  z-index: 10000;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px var(--listbox-bg);
+}
+
+.item {
+  padding: 10px 20px;
+  cursor: pointer;
+  min-width: 100%;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background: var(--inverted-primary-color);
+  }
+
+  &[data-focus] {
+    background: var(--inverted-primary-color);
+    outline: none;
+  }
+
+  &[data-selected] {
+    background: var(--primary-color); /* Колір для вибраного елемента */
+    color: var(
+      --inverted-primary-color
+    ); /* Колір тексту для вибраного елемента */
+  }
+}
+
+.disabled {
+  opacity: 0.7;
+}
+
+.optionsTop {
+  bottom: 100%;
+}
+
+.optionsBottom {
+  opacity: 1;
+}
