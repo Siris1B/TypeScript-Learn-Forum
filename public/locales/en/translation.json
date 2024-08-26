@@ -34,5 +34,8 @@
   "Наука": "Science",
   "Статті не знайдені": "Articles not found",
   "SirisB App": "SirisB App",
-  "Створити статтю": "Create article"
+  "Створити статтю": "Create article",
+  "Помилка під час завантаження статей": "Articles loading error",
+  "Адмінка": "Admin panel",
+  "У вас немає прав на перегляд даної сторінки": "You do not have permission to see this page"
 }

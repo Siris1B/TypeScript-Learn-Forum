@@ -20,9 +20,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -44,9 +42,7 @@
       "views": 1,
       "createdAt": "26.02.2021",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -68,9 +64,7 @@
       "views": 444,
       "createdAt": "26.02.2023",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -92,9 +86,7 @@
       "views": 102222,
       "createdAt": "26.02.2024",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -116,9 +108,7 @@
       "views": 10212,
       "createdAt": "21.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -140,9 +130,7 @@
       "views": 102,
       "createdAt": "26.02.2010",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -164,9 +152,7 @@
       "views": 10222,
       "createdAt": "26.02.2012",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -188,9 +174,7 @@
       "views": 1022,
       "createdAt": "26.02.2013",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -212,9 +196,7 @@
       "views": 1022,
       "createdAt": "1.02.2012",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -236,9 +218,7 @@
       "views": 11022,
       "createdAt": "26.02.2018",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -260,9 +240,7 @@
       "views": 102,
       "createdAt": "26.02.2016",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -284,10 +262,7 @@
       "views": 1022,
       "createdAt": "20.12.2012",
       "userId": "1",
-      "type": [
-        "IT",
-        "ECONOMICS"
-      ],
+      "type": ["IT", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -309,9 +284,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
+      "type": ["ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -333,9 +306,7 @@
       "views": 1021,
       "createdAt": "26.02.2021",
       "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -357,9 +328,7 @@
       "views": 2323,
       "createdAt": "26.02.2015",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -381,9 +350,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -405,9 +372,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -429,9 +394,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -501,15 +464,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAJ8gZmML3-V-ztaF8bYk1fkF16MXiSfHhMQ&s"
     }
   ],
   "profile": [
@@ -519,7 +489,7 @@
       "lastname": "Попович",
       "age": 20,
       "currency": "USD",
-      "country": "Ukraine",
+      "country": "USA",
       "city": "Koziatyn",
       "username": "admin",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
