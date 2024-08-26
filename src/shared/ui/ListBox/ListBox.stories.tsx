@@ -5,18 +5,76 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof ListBox> = {
   component: ListBox,
   title: 'shared/ListBox',
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          verticalAlign: 'center',
+          paddingTop: '100px',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Normal: Story = {
   args: {
-    label: 'Оберіть значення',
+    value: '123',
     items: [
-      { value: '123', content: 'Перший' },
-      { value: '1234', content: 'Другий' },
-      { value: '12356', content: 'Третый' },
+      { content: '1asfasfasf23', value: '123' },
+      { content: '1asfasfasf21233', value: '1232' },
+    ],
+  },
+};
+
+export const topLeft: Story = {
+  args: {
+    direction: 'top left',
+    value: '123',
+    items: [
+      { content: '1asfasfasf23', value: '123' },
+      { content: '1asfasfasf21233', value: '1232' },
+    ],
+  },
+};
+
+export const topRight: Story = {
+  args: {
+    direction: 'top right',
+    value: '123',
+    items: [
+      { content: '1asfasfasf23', value: '123' },
+      { content: '1asfasfasf21233', value: '1232' },
+    ],
+  },
+};
+
+export const bottomLeft: Story = {
+  args: {
+    direction: 'bottom left',
+    value: '123',
+    items: [
+      { content: '1asfasfasf23', value: '123' },
+      { content: '1asfasfasf21233', value: '1232' },
+    ],
+  },
+};
+
+export const bottomRight: Story = {
+  args: {
+    direction: 'bottom right',
+    value: '123',
+    items: [
+      { content: '1asfasfasf23', value: '123' },
+      { content: '1asfasfasf21233', value: '1232' },
     ],
   },
 };

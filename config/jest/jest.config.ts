@@ -17,5 +17,17 @@ const config: Config = {
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
   globals: { __IS_DEV__: true, __API__URL__: '', __PROJECT__: 'jest' },
+  reporters: [
+    'default',
+    [
+      'jest-html-reporters',
+      {
+        publicPath: '<rootDir>/reports/unit',
+        filename: 'report.html',
+        openReport: true,
+        inlineSource: true,
+      },
+    ],
+  ],
 };
 export default config;
