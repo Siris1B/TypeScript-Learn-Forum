@@ -37,5 +37,6 @@
   "Створити статтю": "Create article",
   "Помилка під час завантаження статей": "Articles loading error",
   "Адмінка": "Admin panel",
-  "У вас немає прав на перегляд даної сторінки": "You do not have permission to see this page"
+  "У вас немає прав на перегляд даної сторінки": "You do not have permission to see this page",
+  "Завантаження": "Loading...."
 }

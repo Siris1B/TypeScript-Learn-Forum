@@ -7,7 +7,7 @@ import {
 } from '../lib/ThemeContext';
 
 export interface IThemeProps {
-  children?: ReactNode | undefined;
+  children?: ReactNode;
   initialTheme?: Theme;
 }
 

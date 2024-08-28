@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "isolatedModules": true,
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ES2020",
