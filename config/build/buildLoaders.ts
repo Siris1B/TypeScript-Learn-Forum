@@ -2,20 +2,16 @@ import webpack from 'webpack';
 
 import { BuildOptions } from './types/config';
 import { buildCssLoaders } from './loaders/buildCssLoaders';
+import { buildBabelLoader } from './loaders/buildBabelLoader';
 
 export function buildLoaders(
   options: BuildOptions,
 ): webpack.RuleSetRule[] {
-  const babelLoader = {
-    test: /\.(js|jsx|tsx)$/,
-    exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env'],
-      },
-    },
-  };
+  const codeBabelLoader = buildBabelLoader({ ...options, isTsx: false });
+  const tsxCodeBabelLoader = buildBabelLoader({
+    ...options,
+    isTsx: true,
+  });
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif)$/i,
@@ -31,13 +27,13 @@ export function buildLoaders(
     use: ['@svgr/webpack'],
   };
 
-  const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: 'ts-loader',
-    exclude: /node_modules/,
-  };
-
   const cssLoader = buildCssLoaders(options.isDev);
 
-  return [babelLoader, fileLoader, svgLoader, typescriptLoader, cssLoader];
+  return [
+    fileLoader,
+    svgLoader,
+    codeBabelLoader,
+    tsxCodeBabelLoader,
+    cssLoader,
+  ];
 }
