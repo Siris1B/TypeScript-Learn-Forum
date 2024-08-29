@@ -1,10 +1,10 @@
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
+import { Article } from '../../model/types/article';
 import {
-  Article,
   ArticleBlockType,
   ArticleType,
-} from '../../model/types/article';
+} from 'entities/Article/model/consts/consts';
 
 import { ArticleDetails } from './ArticleDetails';
 
