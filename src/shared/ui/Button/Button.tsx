@@ -31,35 +31,33 @@ interface ButtonProps
   children?: ReactNode;
 }
 
-const ButtonComponent: FC<ButtonProps> = forwardRef(
-  (props, ref = null) => {
-    const {
-      className,
-      children,
-      theme = ThemeButton.OUTLINE,
-      square,
-      size = SizeButton.L,
-      disabled,
-      ...otherProps
-    } = props;
+const ButtonComponent: FC<ButtonProps> = forwardRef((props, ref) => {
+  const {
+    className,
+    children,
+    theme = ThemeButton.OUTLINE,
+    square,
+    size = SizeButton.L,
+    disabled,
+    ...otherProps
+  } = props;
 
-    const mods: Mods = {
-      [styles[theme]]: true,
-      [styles.square]: square,
-      [styles[size]]: true,
-      [styles.disabled]: disabled,
-    };
-    return (
-      <button
-        disabled={disabled}
-        ref={ref}
-        className={classNames(styles.ButtonClass, mods, [className])}
-        {...otherProps}
-      >
-        {children}
-      </button>
-    );
-  },
-);
+  const mods: Mods = {
+    [styles[theme]]: true,
+    [styles.square]: square,
+    [styles[size]]: true,
+    [styles.disabled]: disabled,
+  };
+  return (
+    <button
+      disabled={disabled}
+      ref={ref}
+      className={classNames(styles.ButtonClass, mods, [className])}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
+});
 
 export const Button = memo(ButtonComponent);

@@ -18,7 +18,7 @@ interface AppLinkProps extends LinkProps {
 const AppLinkComponent: FC<AppLinkProps> = forwardRef<
   HTMLAnchorElement,
   AppLinkProps
->((props, ref = null) => {
+>((props, ref) => {
   const {
     to,
     className,

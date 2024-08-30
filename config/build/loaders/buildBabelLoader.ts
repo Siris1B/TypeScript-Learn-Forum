@@ -27,7 +27,7 @@ export function buildBabelLoader({ isTsx }: BuildBabelLoaderProps) {
               props: ['data-testid'],
             },
           ],
-        ],
+        ].filter(Boolean),
       },
     },
   };

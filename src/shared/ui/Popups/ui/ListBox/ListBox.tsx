@@ -9,8 +9,10 @@ import { ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
 
-import { Button } from '../Button/Button';
-import { HStack } from '../Stack';
+import { Button } from '../../../Button/Button';
+import { HStack } from '../../../Stack';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/popup.module.scss';
 
 import cls from './ListBox.module.scss';
 
@@ -31,13 +33,6 @@ interface ListBoxProps {
   label?: string;
 }
 
-const mapDirectionClass: Record<DropdownDirection, string> = {
-  'bottom left': cls.optionsBottomLeft,
-  'bottom right': cls.optionsBottomRight,
-  'top left': cls.optionsTopLeft,
-  'top right': cls.optionsTopRight,
-};
-
 export function ListBox(props: ListBoxProps) {
   const {
     className,
@@ -57,12 +52,18 @@ export function ListBox(props: ListBoxProps) {
     <HStack gap="4">
       {' '}
       {label && (
-        <span className={readonly ? cls.disabled : ''}>{label + '>'}</span>
+        <span className={readonly ? popupCls.disabled : ''}>
+          {label + '>'}
+        </span>
       )}{' '}
       <HListBox
         disabled={readonly}
         as={'div'}
-        className={classNames(cls.ListBox, {}, ['app_modal', className])}
+        className={classNames(cls.ListBox, {}, [
+          'app_modal',
+          className,
+          popupCls.popup,
+        ])}
         value={value}
         onChange={onChange}
       >
@@ -85,7 +86,7 @@ export function ListBox(props: ListBoxProps) {
               className={classNames(
                 cls.item,
                 { [cls.disabled]: item.disabled },
-                [],
+                [popupCls.menuItem],
               )}
               key={item.value}
               value={item.value}
