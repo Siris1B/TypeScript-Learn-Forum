@@ -6,7 +6,8 @@
 
 .app,
 .app_modal,
-headlessui-portal-root {
+headlessui-portal-root,
+.app_drawer {
   font: var(--font-m);
   color: var(--primary-color);
 }
