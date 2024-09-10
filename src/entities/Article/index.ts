@@ -5,6 +5,7 @@ export {
   ArticleView,
   ArticleSortField,
   ArticleType,
+  ArticleBlockType,
 } from './model/consts/consts';
 
 export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';

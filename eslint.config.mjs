@@ -91,6 +91,17 @@ export default tsEslint.config(
       'react/jsx-uses-react': 'off',
       'react/prop-types': 'off',
       'feature-sliced-import-checker/path-checker': 'error',
+      'feature-sliced-import-checker/public-api-imports': [
+        'error',
+        {
+          alias: '@',
+          testFilesPatterns: [
+            '**/*.test.*',
+            '**/*.story.*',
+            '**/StoreDecorator.tsx',
+          ],
+        },
+      ],
     },
   },
   {

@@ -1,4 +1,3 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { Dropdown } from 'shared/ui/Popups';
@@ -12,8 +11,6 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useAppSelector } from 'shared/lib/hooks/useAppSelector/useAppSelector';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-
-import cls from './AvatarDropdown.module.scss';
 interface AvatarDropdownProps {
   className?: string;
 }

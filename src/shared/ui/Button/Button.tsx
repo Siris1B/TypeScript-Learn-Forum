@@ -29,6 +29,7 @@ interface ButtonProps
   size?: SizeButton;
   disabled?: boolean;
   children?: ReactNode;
+  fullWidth?: boolean;
 }
 
 const ButtonComponent: FC<ButtonProps> = forwardRef((props, ref) => {
@@ -39,6 +40,7 @@ const ButtonComponent: FC<ButtonProps> = forwardRef((props, ref) => {
     square,
     size = SizeButton.L,
     disabled,
+    fullWidth,
     ...otherProps
   } = props;
 
@@ -47,6 +49,7 @@ const ButtonComponent: FC<ButtonProps> = forwardRef((props, ref) => {
     [styles.square]: square,
     [styles[size]]: true,
     [styles.disabled]: disabled,
+    [styles.fullWidth]: fullWidth,
   };
   return (
     <button

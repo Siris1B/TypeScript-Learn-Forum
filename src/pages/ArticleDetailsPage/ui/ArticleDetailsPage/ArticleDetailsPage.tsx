@@ -6,9 +6,10 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Page } from 'widgets/Page/Page';
+import { Page } from 'widgets/Page';
 import { VStack } from 'shared/ui/Stack';
 import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
+import { ArticleRating } from 'features/articleRating';
 
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
@@ -28,6 +29,8 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const { className } = props;
   const { id: articleId } = useParams<{ id: string }>();
 
+  if (!articleId) return null;
+
   return (
     <DynamicModuleLoader removeAfterUnmount={true} reducers={reducers}>
       <Page
@@ -36,6 +39,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={articleId} />
+          <ArticleRating articleId={articleId} />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={articleId} />
         </VStack>
