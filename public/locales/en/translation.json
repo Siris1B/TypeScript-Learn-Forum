@@ -38,5 +38,11 @@
   "Помилка під час завантаження статей": "Articles loading error",
   "Адмінка": "Admin panel",
   "У вас немає прав на перегляд даної сторінки": "You do not have permission to see this page",
-  "Завантаження": "Loading...."
+  "Завантаження": "Loading....",
+  "Ваш відгук": "Your response",
+  "Закрити": "Close",
+  "Відправити": "Send",
+  "Оцініть статтю": "Rate the article",
+  "Залиште ваш відгук щодо статті, що допоможе покращити якість": "Leave your feedback on the article, which will help improve the quality",
+  "Дякуємо за ваш відгук": "EN Дякуємо за ваш відгук"
 }

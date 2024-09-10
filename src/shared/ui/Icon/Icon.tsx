@@ -3,12 +3,20 @@ import { memo } from 'react';
 
 import cls from './Icon.module.scss';
 
-interface IconProps {
+interface IconProps extends React.SVGProps<SVGAElement> {
   className?: string;
-  Svg: React.VFC<React.SVGProps<SVGAElement>>;
+  Svg: React.FC<React.SVGProps<SVGAElement>>;
+  inverted?: boolean;
 }
 
 export const Icon = memo((props: IconProps) => {
-  const { className, Svg } = props;
-  return <Svg className={classNames(cls.Icon, {}, [className])}></Svg>;
+  const { className, Svg, inverted, ...otherProps } = props;
+  return (
+    <Svg
+      {...otherProps}
+      className={classNames(inverted ? cls.inverted : cls.Icon, {}, [
+        className,
+      ])}
+    ></Svg>
+  );
 });

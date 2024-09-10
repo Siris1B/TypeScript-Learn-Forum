@@ -8,7 +8,7 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "./",
     "strict": true,
     "paths": {
       "*": ["./src/*"]
@@ -31,6 +31,7 @@
     "config/jest/**/*.ts",
     "config/jest/**/*.tsx",
     "./**/eslint.config.mjs",
-    "./**/global.d.ts"
+    "./**/global.d.ts",
+    "vite.config.ts"
   ]
 }

@@ -6,7 +6,7 @@ import { scrollSaveActions } from 'features/ScrollSave';
 import { useLocation } from 'react-router-dom';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
-import { getScrollSaveByPath } from 'features/ScrollSave/model/selectors/ScrollSaveSelectors';
+import { getScrollSaveByPath } from 'features/ScrollSave';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 
