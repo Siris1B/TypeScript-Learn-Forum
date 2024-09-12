@@ -1,6 +1,7 @@
-import { BugButton } from 'app/providers/ErrorBoundary';
 import { RatingCard } from 'entities/Rating';
 import { useTranslation } from 'react-i18next';
+// eslint-disable-next-line feature-sliced-import-checker/layer-imports-checker
+import { BugButton } from 'app/providers/ErrorBoundary';
 import { Page } from 'widgets/Page';
 
 const MainPage = () => {

@@ -1,5 +1,7 @@
 import { Decorator } from '@storybook/react/*';
-import { Theme, ThemeProvider } from 'app/providers/ThemeProvider';
+// eslint-disable-next-line feature-sliced-import-checker/layer-imports-checker
+import { ThemeProvider } from 'app/providers/ThemeProvider';
+import { Theme } from 'shared/const/theme';
 
 export const ThemeDecorator =
   (theme: Theme): Decorator =>

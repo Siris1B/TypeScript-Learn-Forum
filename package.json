@@ -73,7 +73,7 @@
     "css-loader": "^6.6.0",
     "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-feature-sliced-import-checker": "^0.0.2",
+    "eslint-plugin-feature-sliced-import-checker": "^0.0.3",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-prettier": "^5.1.3",

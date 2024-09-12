@@ -102,6 +102,12 @@ export default tsEslint.config(
           ],
         },
       ],
+      'feature-sliced-import-checker/layer-imports-checker': [
+        'error',
+        {
+          ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+        },
+      ],
     },
   },
   {
