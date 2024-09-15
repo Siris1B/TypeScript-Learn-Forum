@@ -12,6 +12,7 @@ import esJest from 'eslint-plugin-jest';
 import storybook from 'storybook';
 import { fixupPluginRules } from '@eslint/compat';
 import featureSlicedImportChecker from 'eslint-plugin-feature-sliced-import-checker';
+import eslintUnusedImports from 'eslint-plugin-unused-imports';
 
 /** @type {import('eslint'.Linter.FlatConfig[])} */
 export default tsEslint.config(
@@ -27,6 +28,7 @@ export default tsEslint.config(
       'eslint-plugin-jest': esJest,
       storybook,
       'feature-sliced-import-checker': featureSlicedImportChecker,
+      'unused-imports': eslintUnusedImports,
     },
     languageOptions: {
       globals: {
@@ -108,6 +110,7 @@ export default tsEslint.config(
           ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
         },
       ],
+      'unused-imports/no-unused-imports': 'error',
     },
   },
   {
