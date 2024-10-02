@@ -6,7 +6,7 @@ import cls from './ForbiddenPage.module.scss';
 function ForbiddenPage() {
   const { t } = useTranslation('');
   return (
-    <Page className={cls.ForbiddenPage}>
+    <Page data-testid="ForbiddenPage" className={cls.ForbiddenPage}>
       {t('У вас немає прав на перегляд даної сторінки')}
     </Page>
   );

@@ -9,6 +9,8 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { getRouteArticleDetails } from 'shared/const/router';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { AppImage } from 'shared/ui/AppImage/AppImage';
+import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
@@ -42,7 +44,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
       (block) => block.type === ArticleBlockType.TEXT,
     ) as ArticleTextBlock;
     return (
-      <div className={classNames('', {}, [className, cls[view]])}>
+      <div
+        className={classNames('', {}, [className, cls[view]])}
+        data-testid={'ArticleListItem'}
+      >
         <Card>
           <div className={cls.header}>
             <Avatar size={30} src={article.user.avatar} />
@@ -52,7 +57,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           <Text title={article.title} className={cls.title} />
           {types}
 
-          <img src={article.img} className={cls.img} alt={article.title} />
+          <AppImage
+            fallback={<Skeleton width={'100%'} height={250} />}
+            src={article.img}
+            className={cls.img}
+            alt={article.title}
+          />
           {textBlock && (
             <ArticleTextBlockComponent
               className={cls.textBlock}
@@ -78,13 +88,19 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
   return (
     <AppLink
+      data-testid={'ArticleListItem'}
       target={target}
       to={getRouteArticleDetails(article.id)}
       className={classNames('', {}, [className, cls[view]])}
     >
       <Card>
         <div className={cls.imageWrapper}>
-          <img alt={article.title} src={article.img} className={cls.img} />
+          <AppImage
+            fallback={<Skeleton width={200} height={200} />}
+            alt={article.title}
+            src={article.img}
+            className={cls.img}
+          />
           <Text text={article.createdAt} className={cls.date} />
         </div>
         <div className={cls.infoWrapper}>
