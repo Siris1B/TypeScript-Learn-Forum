@@ -599,6 +599,20 @@
       "rate": 5,
       "feedback": "super",
       "id": 4
+    },
+    {
+      "userId": "1",
+      "articleId": "MwQESc4",
+      "rate": 4,
+      "feedback": "відгук",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "articleId": "MwQESc4",
+      "rate": 4,
+      "feedback": "відгук",
+      "id": 6
     }
   ],
   "profile-ratings": [
