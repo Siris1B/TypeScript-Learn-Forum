@@ -516,6 +516,18 @@
       "userId": "1",
       "text": "sad",
       "id": "LFs-cnb"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "/",
+      "id": "e6-ckYi"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "text": "h",
+      "id": "8wkjFQE"
     }
   ],
   "users": [
@@ -599,20 +611,6 @@
       "rate": 5,
       "feedback": "super",
       "id": 4
-    },
-    {
-      "userId": "1",
-      "articleId": "MwQESc4",
-      "rate": 4,
-      "feedback": "відгук",
-      "id": 5
-    },
-    {
-      "userId": "1",
-      "articleId": "MwQESc4",
-      "rate": 4,
-      "feedback": "відгук",
-      "id": 6
     }
   ],
   "profile-ratings": [

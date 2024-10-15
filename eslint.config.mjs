@@ -9,7 +9,6 @@ import tsEslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import jest from 'jest';
 import esJest from 'eslint-plugin-jest';
-import storybook from 'storybook';
 import { fixupPluginRules } from '@eslint/compat';
 import featureSlicedImportChecker from 'eslint-plugin-feature-sliced-import-checker';
 import eslintUnusedImports from 'eslint-plugin-unused-imports';
@@ -26,7 +25,6 @@ export default tsEslint.config(
       '@typescript-eslint': tsEslint.plugin,
       jest,
       'eslint-plugin-jest': esJest,
-      storybook,
       'feature-sliced-import-checker': featureSlicedImportChecker,
       'unused-imports': eslintUnusedImports,
     },
