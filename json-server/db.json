@@ -516,6 +516,18 @@
       "userId": "1",
       "text": "sad",
       "id": "LFs-cnb"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "/",
+      "id": "e6-ckYi"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "text": "h",
+      "id": "8wkjFQE"
     }
   ],
   "users": [
@@ -552,12 +564,12 @@
       "id": 1,
       "first": "Юра5",
       "lastname": "Попович",
-      "age": 20,
-      "currency": "USD",
-      "country": "USA",
-      "city": "Koziatyn",
+      "age": 465,
+      "currency": "EUR",
+      "country": "Ukraine",
+      "city": "Moscow",
       "username": "admin",
-      "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
     },
     {
       "id": 2,

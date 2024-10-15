@@ -9,9 +9,9 @@ import tsEslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import jest from 'jest';
 import esJest from 'eslint-plugin-jest';
-import storybook from 'storybook';
 import { fixupPluginRules } from '@eslint/compat';
 import featureSlicedImportChecker from 'eslint-plugin-feature-sliced-import-checker';
+import eslintUnusedImports from 'eslint-plugin-unused-imports';
 
 /** @type {import('eslint'.Linter.FlatConfig[])} */
 export default tsEslint.config(
@@ -25,8 +25,8 @@ export default tsEslint.config(
       '@typescript-eslint': tsEslint.plugin,
       jest,
       'eslint-plugin-jest': esJest,
-      storybook,
       'feature-sliced-import-checker': featureSlicedImportChecker,
+      'unused-imports': eslintUnusedImports,
     },
     languageOptions: {
       globals: {
@@ -102,6 +102,13 @@ export default tsEslint.config(
           ],
         },
       ],
+      'feature-sliced-import-checker/layer-imports-checker': [
+        'error',
+        {
+          ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+        },
+      ],
+      'unused-imports/no-unused-imports': 'error',
     },
   },
   {

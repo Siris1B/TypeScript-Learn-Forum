@@ -32,6 +32,9 @@
     "config/jest/**/*.tsx",
     "./**/eslint.config.mjs",
     "./**/global.d.ts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "cypress/**/*.ts",
+    "cypress/**/*.tsx",
+    "./cypress.config.ts"
   ]
 }

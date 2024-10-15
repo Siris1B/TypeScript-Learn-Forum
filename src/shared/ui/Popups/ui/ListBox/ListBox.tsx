@@ -4,10 +4,10 @@ import {
   ListboxOption,
   ListboxOptions,
 } from '@headlessui/react';
-import { useTheme } from 'app/providers/ThemeProvider';
 import { ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
+import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 
 import { Button } from '../../../Button/Button';
 import { HStack } from '../../../Stack';

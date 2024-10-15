@@ -1,8 +1,10 @@
 import path from 'path';
+import 'whatwg-fetch';
 
 import type { Config } from 'jest';
 
 const config: Config = {
+  preset: 'ts-jest',
   clearMocks: true,
   testEnvironment: 'jsdom',
   coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],

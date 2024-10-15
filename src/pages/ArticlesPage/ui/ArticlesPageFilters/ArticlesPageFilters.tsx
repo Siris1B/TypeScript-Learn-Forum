@@ -1,13 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import {
-  ArticleSortField,
-  ArticleSortSelector,
-  ArticleTypeTabs,
-  ArticleView,
-  ArticleViewSelector,
-} from 'entities/Article';
+import { ArticleSortField, ArticleView } from 'entities/Article';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Card } from 'shared/ui/Card/Card';
@@ -15,6 +9,9 @@ import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { ArticleType } from 'entities/Article';
+import { ArticleSortSelector } from 'features/ArticleSortSlector';
+import { ArticleViewSelector } from 'features/ArticleViewSelector';
+import { ArticleTypeTabs } from 'features/ArticleTypeTabs';
 
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
 import {
